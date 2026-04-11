@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mantis — CDMO &amp; Bioprocess Intelligence</title>
+  <meta name="description" content="Systematic signal monitoring across 58 CDMO and bioprocess companies — patents, clinical trials, FDA actions, SEC filings, and industry news synthesised weekly.">
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Mantis — CDMO &amp; Bioprocess Sector Intelligence">
+  <meta property="og:description" content="Systematic monitoring of 58 contract drug manufacturers across 8 independent data sources. Patent filings, clinical trials, FDA &amp; EMA actions, SEC disclosures, scientific publications — synthesised weekly.">
+    <meta property="og:image" content="https://bryans01.github.io/Mantis/images/narrative_momentum.png">
+    <meta property="og:url"   content="https://bryans01.github.io/Mantis/">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Mantis — CDMO &amp; Bioprocess Intelligence">
+  <meta name="twitter:description" content="Systematic monitoring of 58 CDMO companies across 8 independent data sources. Updated weekly.">  <meta name="twitter:image" content="https://bryans01.github.io/Mantis/images/narrative_momentum.png">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #131820;
+      --surface:  #181f2c;
+      --surface2: #1d2539;
+      --border:   #252e3d;
+      --border2:  #2c3850;
+      --text:     #dcd7cf;
+      --text2:    #a09590;
+      --text3:    #6b6460;
+      --blue:     #2080cc;
+      --blue2:    #5b9ef5;
+      --orange:   #ff9040;
+      --num:      #ffffff;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    /* ── Header ──────────────────────────────────── */
+    header {
+      background: linear-gradient(155deg, #0b0f18 0%, #101828 55%, #0b0f18 100%);
+      padding: 48px 32px 42px;
+      position: relative;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(32,128,204,0.3) 0%, transparent 60%);
+    }
+    .hd { max-width: 860px; margin: 0 auto; }
+    .logo {
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 5.5px;
+      text-transform: uppercase;
+      color: rgba(180,170,160,0.45);
+      margin: 0 0 22px 0;
+      padding: 0;
+      line-height: 1;
+    }
+    .logo span { color: var(--blue2); }
+    .headline {
+      font-size: clamp(28px, 4.5vw, 44px);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.1;
+      max-width: 520px;
+      letter-spacing: -1px;
+    }
+    .sub {
+      margin-top: 18px;
+      font-size: 11px;
+      color: rgba(200,192,180,0.5);
+      letter-spacing: 0.7px;
+    }
+
+    /* ── Layout ──────────────────────────────────── */
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 32px 80px;
+    }
+
+    /* ── Section header ───────────────────────────── */
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+    .section-label {
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: var(--text3);
+      white-space: nowrap;
+    }
+    .section-rule {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── Stats block ─────────────────────────────── */
+    .data-block {
+      margin-top: 52px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 48px rgba(0,0,0,0.55);
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background: var(--border);
+      gap: 1px;
+    }
+    .stat {
+      background: var(--surface);
+      padding: 28px 24px 22px;
+    }
+    .stat:first-child {
+      border-top: 3px solid var(--blue);
+      padding-top: 25px;
+    }
+    .num {
+      font-size: clamp(30px, 4vw, 46px);
+      font-weight: 800;
+      color: var(--num);
+      line-height: 1;
+      letter-spacing: -2px;
+      font-variant-numeric: tabular-nums;
+    }
+    .lbl {
+      font-size: 9.5px;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 8px;
+      line-height: 1.4;
+    }
+    .narrative-band {
+      background: var(--surface2);
+      border-top: 1px solid var(--border);
+      padding: 13px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .narrative-kicker {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text3);
+      white-space: nowrap;
+    }
+    .narrative-tag {
+      display: inline-block;
+      background: rgba(255,144,64,0.12);
+      color: var(--orange);
+      border: 1px solid rgba(255,144,64,0.28);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      padding: 4px 14px;
+      border-radius: 20px;
+    }
+    .narrative-since {
+      margin-left: auto;
+      font-size: 10.5px;
+      color: var(--text3);
+    }
+    .tech-theme-band {
+      background: rgba(160,100,240,.06);
+      border-top: 1px solid rgba(160,100,240,.15);
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .tech-theme-kicker {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text3);
+      white-space: nowrap;
+    }
+    .tech-theme-mod {
+      display: inline-block;
+      background: rgba(160,100,240,.15);
+      color: #c9b8f8;
+      border: 1px solid rgba(160,100,240,.3);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 12px;
+      border-radius: 20px;
+    }
+    .tech-theme-tag {
+      font-size: 11px;
+      color: #a897cc;
+      font-style: italic;
+    }
+    @media (max-width: 580px) {
+      .stats { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ── Chart ───────────────────────────────────── */
+    .chart-section { margin-top: 54px; }
+    .chart-img {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    }
+    .chart-placeholder {
+      text-align: center;
+      padding: 60px 0;
+      color: var(--text3);
+      font-style: italic;
+      font-size: 14px;
+      border: 1px dashed var(--border);
+      border-radius: 10px;
+      background: var(--surface);
+    }
+
+    /* ── Narrative scoreboard ────────────────────── */
+    .narr-section { margin-top: 44px; }
+    .narr-board {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .narr-row {
+      display: grid;
+      grid-template-columns: 28px 1fr 140px 42px;
+      align-items: center;
+      gap: 14px;
+      padding: 11px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .narr-row:last-child { border-bottom: none; }
+    .narr-rank {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--text3);
+      letter-spacing: 0.5px;
+      text-align: right;
+    }
+    .narr-name {
+      font-size: 12.5px;
+      font-weight: 500;
+      letter-spacing: 0.1px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .narr-bar-wrap {
+      height: 4px;
+      background: rgba(255,255,255,0.13);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .narr-bar {
+      height: 100%;
+      border-radius: 2px;
+    }
+    .narr-score {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text2);
+      text-align: right;
+      letter-spacing: -0.5px;
+    }
+
+    /* ── Source breakdown ────────────────────────── */
+    .src-section { margin-top: 44px; }
+    .src-rows {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .src-row {
+      display: grid;
+      grid-template-columns: 110px 1fr 52px;
+      align-items: center;
+      gap: 14px;
+      padding: 10px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .src-row:last-child { border-bottom: none; }
+    .src-name {
+      font-size: 11.5px;
+      font-weight: 500;
+      color: var(--text2);
+      text-transform: capitalize;
+    }
+    .src-bar-wrap {
+      height: 4px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .src-bar {
+      height: 100%;
+      border-radius: 2px;
+      background: var(--blue2);
+    }
+    .src-count {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text3);
+      text-align: right;
+      letter-spacing: -0.3px;
+    }
+
+    /* ── Curated news ────────────────────────────── */
+    .news-section { margin-top: 54px; }
+    .news-list {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .news-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 13px 18px;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      transition: background 0.12s;
+    }
+    .news-item:last-child { border-bottom: none; }
+    .news-item:hover { background: var(--surface2); }
+    .news-left {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      min-width: 0;
+    }
+    .news-icon {
+      font-size: 14px;
+      margin-top: 1px;
+      flex-shrink: 0;
+    }
+    .news-body {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      min-width: 0;
+    }
+    .news-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .news-item:hover .news-title { color: var(--blue2); }
+    .news-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .news-co {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      background: rgba(255,144,64,0.1);
+      border: 1px solid rgba(255,144,64,0.2);
+      padding: 1px 7px;
+      border-radius: 10px;
+    }
+    .news-domain {
+      font-size: 10.5px;
+      color: var(--text3);
+    }
+    .news-score {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text3);
+      flex-shrink: 0;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      padding: 2px 8px;
+      border-radius: 10px;
+      letter-spacing: -0.3px;
+    }
+    .news-note {
+      font-size: 10.5px;
+      color: var(--text3);
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    /* ── Story of the week ───────────────────────── */
+    .story-section { margin-top: 44px; }
+    .story-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+      padding: 22px 28px;
+    }
+    .story-top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .story-name {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.3px;
+    }
+    .story-trend {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+    .story-trend.up   { background: rgba(92,184,92,0.15); color: #5CB85C; border: 1px solid rgba(92,184,92,0.3); }
+    .story-trend.down { background: rgba(224,82,82,0.15); color: #E05252; border: 1px solid rgba(224,82,82,0.3); }
+    .story-trend.flat { background: rgba(160,149,144,0.12); color: var(--text3); border: 1px solid var(--border); }
+    .story-blurb {
+      font-size: 13.5px;
+      line-height: 1.85;
+      color: var(--text2);
+      max-width: 640px;
+    }
+    .story-counts {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .story-count-num {
+      font-size: 28px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+    .story-count-lbl {
+      font-size: 11px;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+    .story-sep {
+      font-size: 18px;
+      color: var(--border2);
+      margin: 0 4px;
+    }
+
+    /* ── Timeline ───────────────────────────────── */
+    .tl-section { margin-top: 54px; }
+    .tl-events {
+      margin-top: 4px;
+      position: relative;
+      padding-left: 0;
+    }
+    .tl-note {
+      font-size: 11px;
+      color: var(--text3);
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+    .tl-event {
+      display: grid;
+      grid-template-columns: 56px 1px 1fr;
+      gap: 0 20px;
+      margin-bottom: 0;
+      position: relative;
+    }
+    .tl-year {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--blue2);
+      letter-spacing: 0.2px;
+      text-align: right;
+      padding-top: 2px;
+      padding-bottom: 32px;
+      white-space: nowrap;
+    }
+    .tl-spine {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .tl-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--blue2);
+      flex-shrink: 0;
+      margin-top: 4px;
+      border: 2px solid var(--bg);
+      outline: 1px solid var(--blue2);
+    }
+    .tl-line {
+      flex: 1;
+      width: 1px;
+      background: var(--border2);
+      margin-top: 4px;
+    }
+    .tl-event:last-child .tl-line { display: none; }
+    .tl-body {
+      padding-bottom: 32px;
+    }
+    .tl-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+      margin-bottom: 5px;
+    }
+    .tl-desc {
+      font-size: 12.5px;
+      line-height: 1.75;
+      color: var(--text2);
+      max-width: 560px;
+    }
+
+    /* ── About ───────────────────────────────────── */
+    .about-block {
+      margin-top: 44px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--blue);
+      border-radius: 0 10px 10px 0;
+      padding: 24px 30px;
+    }
+    .about-block p {
+      font-size: 13.5px;
+      line-height: 1.9;
+      color: var(--text2);
+      max-width: 640px;
+    }
+
+    /* ── Vignette ────────────────────────────────── */
+    .vignette-block {
+      margin-top: 44px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+      padding: 24px 30px;
+    }
+    .vignette-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 12px;
+    }
+    .vignette-block p {
+      font-size: 13.5px;
+      line-height: 1.9;
+      color: var(--text2);
+      max-width: 640px;
+    }
+
+    /* ── CTA ─────────────────────────────────────── */
+    .cta-block {
+      margin-top: 44px;
+      padding: 28px 32px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .cta-text {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .cta-sub {
+      font-size: 12.5px;
+      color: var(--text2);
+      margin-top: 4px;
+    }
+    .cta-link {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--orange);
+      text-decoration: none;
+      letter-spacing: 0.2px;
+      white-space: nowrap;
+    }
+    .cta-link:hover { text-decoration: underline; }
+
+    /* ── Sources ─────────────────────────────────── */
+    .sources-section { margin-top: 44px; }
+    .source-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .pill {
+      background: var(--surface);
+      border: 1px solid var(--border2);
+      border-radius: 6px;
+      padding: 6px 14px;
+      font-size: 11.5px;
+      font-weight: 500;
+      color: var(--text2);
+      letter-spacing: 0.1px;
+    }
+
+    /* ── Footer ──────────────────────────────────── */
+    .foot {
+      margin-top: 64px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .foot a {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--blue2);
+      text-decoration: none;
+    }
+    .foot a:hover { text-decoration: underline; }
+    .foot small {
+      font-size: 10.5px;
+      color: var(--text3);
+      max-width: 420px;
+      line-height: 1.5;
+      text-align: right;
+    }
+
+    /* ── Signal of the week ─────────────────────── */
+    .sig-section { margin-top: 44px; }
+    .sig-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--blue);
+      border-radius: 0 10px 10px 0;
+      padding: 20px 26px;
+      text-decoration: none;
+      display: block;
+      transition: background 0.12s;
+    }
+    .sig-card:hover { background: var(--surface2); }
+    .sig-badges {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .sig-source-badge {
+      font-size: 9.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      padding: 3px 9px;
+      border-radius: 4px;
+      background: rgba(32,128,204,0.12);
+      color: var(--blue2);
+      border: 1px solid rgba(32,128,204,0.25);
+    }
+    .sig-strength {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--text3);
+      letter-spacing: 0.2px;
+    }
+    .sig-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    .sig-card:hover .sig-title { color: var(--blue2); }
+    .sig-company {
+      font-size: 11.5px;
+      color: var(--text3);
+    }
+    .sig-company strong {
+      color: var(--blue2);
+      font-weight: 600;
+    }
+
+    /* ── CTA ─────────────────────────────────────── */
+    .cta-section { margin-top: 54px; }
+    .cta-card {
+      border: 1px solid var(--border2);
+      border-radius: 10px;
+      padding: 28px 32px;
+      background: linear-gradient(135deg, rgba(32,128,204,0.05) 0%, transparent 60%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .cta-left { flex: 1; min-width: 220px; }
+    .cta-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+      letter-spacing: -0.2px;
+    }
+    .cta-body {
+      font-size: 13px;
+      line-height: 1.75;
+      color: var(--text2);
+      max-width: 480px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--blue);
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 11px 22px;
+      border-radius: 6px;
+      white-space: nowrap;
+      letter-spacing: 0.1px;
+      flex-shrink: 0;
+      transition: background 0.12s;
+    }
+    .cta-btn:hover { background: var(--blue2); }
+
+    /* ── Term tooltips ───────────────────────────── */
+    .term {
+      border-bottom: 1px dashed rgba(91,158,245,0.45);
+      cursor: help;
+    }
+    .term:hover { border-bottom-color: var(--blue2); }
+    #term-tip {
+      position: absolute;
+      background: #141c2b;
+      border: 1px solid var(--border2);
+      border-radius: 8px;
+      padding: 12px 16px;
+      max-width: 280px;
+      z-index: 1000;
+      pointer-events: none;
+      display: none;
+      transition: opacity 0.12s;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.7);
+    }
+    .tt-full {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--blue2);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 6px;
+    }
+    .tt-def {
+      font-size: 12px;
+      line-height: 1.6;
+      color: var(--text2);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hd">
+    <h1 class="logo">&#9632;<span> M</span>ANTIS</h1>
+    <div class="headline">CDMO &amp; Bioprocess<br>Sector Intelligence</div>
+    <div class="sub">Updated 11 April 2026 &nbsp;&middot;&nbsp; 58 companies &nbsp;&middot;&nbsp; 8 data sources</div>
+  </div>
+</header>
+
+<main>
+
+  <div class="data-block">
+    <div class="stats">
+      <div class="stat">
+        <div class="num">958</div>
+        <div class="lbl">Signals<br>30 days</div>
+      </div>
+      <div class="stat">
+        <div class="num">58</div>
+        <div class="lbl">Companies<br>tracked</div>
+      </div>
+      <div class="stat">
+        <div class="num">25</div>
+        <div class="lbl">Convergence<br>alerts active</div>
+      </div>
+      <div class="stat">
+        <div class="num">8</div>
+        <div class="lbl">Data<br>sources</div>
+      </div>
+    </div>
+    <div class="narrative-band">
+      <span class="narrative-kicker">Leading narrative</span>
+      <span class="narrative-tag">CDMO M&amp;A Consolidation</span>
+      <span class="narrative-since">Rolling 7 days</span>
+    </div>
+    <div class="tech-theme-band"><span class="tech-theme-kicker">Leading tech theme</span><span class="tech-theme-mod">Small Molecule</span><span class="tech-theme-note" style="margin-left:auto;font-size:10.5px;color:var(--text3)">Patent &amp; publication signals · 30 days</span></div>
+  </div>
+
+
+  <div class="narr-section">
+    <div class="section-header">
+      <span class="section-label">Narrative tracker — signals · rolling 7 days</span>
+      <span class="section-rule"></span>
+    </div>
+    <div class="narr-board">
+      <div class="narr-row"><span class="narr-rank">01</span><span class="narr-name" style="color:#ffffff">CDMO M&amp;A Consolidation</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:100%;background:#3DBCB0"></span></span><span class="narr-score">152</span></div>
+      <div class="narr-row"><span class="narr-rank">02</span><span class="narr-name" style="color:#dcd7cf">GLP-1 Manufacturing Capacity</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:65%;background:#FF9040"></span></span><span class="narr-score">100</span></div>
+      <div class="narr-row"><span class="narr-rank">03</span><span class="narr-name" style="color:#dcd7cf">Cell &amp; Gene Therapy CDMO Consolidation</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:48%;background:#5CB85C"></span></span><span class="narr-score">74</span></div>
+      <div class="narr-row"><span class="narr-rank">04</span><span class="narr-name" style="color:#a09590">CDMO Capacity Buildout</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:30%;background:#B06ED8"></span></span><span class="narr-score">47</span></div>
+      <div class="narr-row"><span class="narr-rank">05</span><span class="narr-name" style="color:#a09590">ADC Outsourcing Wave</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:13%;background:#5B9EF5"></span></span><span class="narr-score">21</span></div>
+      <div class="narr-row"><span class="narr-rank">06</span><span class="narr-name" style="color:#a09590">FDA / Regulatory Pressure</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:9%;background:#E8508A"></span></span><span class="narr-score">15</span></div>
+      <div class="narr-row"><span class="narr-rank">07</span><span class="narr-name" style="color:#a09590">Next-Gen Manufacturing Technology</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:9%;background:#F2C94C"></span></span><span class="narr-score">14</span></div>
+      <div class="narr-row"><span class="narr-rank">08</span><span class="narr-name" style="color:#a09590">Biosimilar Market Expansion</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:13%;background:#E05252"></span></span><span class="narr-score">20</span></div>
+      <div class="narr-row"><span class="narr-rank">09</span><span class="narr-name" style="color:#a09590">BIOSECURE Act / China De-risking</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:3%;background:#E8A23C"></span></span><span class="narr-score">6</span></div>
+      <div class="narr-row"><span class="narr-rank">10</span><span class="narr-name" style="color:#a09590">Nucleic Acid Manufacturing</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:4%;background:#5b9ef5"></span></span><span class="narr-score">7</span></div>
+    </div>
+  </div>
+
+
+  <div class="chart-section">
+    <div class="section-header">
+      <span class="section-label">Narrative momentum — rolling 30 days</span>
+      <span class="section-rule"></span>
+    </div>
+    <img src="images/narrative_momentum.png" alt="Narrative momentum — 30 days" class="chart-img">
+    <p style="margin-top:10px;font-size:10.5px;color:var(--text3);font-style:italic">
+      Each line tracks one sector narrative — signal volume and strength across all monitored sources, updated daily.
+    </p>
+  </div>
+
+
+
+  <div class="src-section">
+    <div class="section-header">
+      <span class="section-label">Signal sources — rolling 30 days</span>
+      <span class="section-rule"></span>
+    </div>
+    <div class="src-rows">
+      <div class="src-row"><span class="src-name">News</span><span class="src-bar-wrap"><span class="src-bar" style="width:100%"></span></span><span class="src-count">518</span></div>
+<div class="src-row"><span class="src-name">Clinical Trials</span><span class="src-bar-wrap"><span class="src-bar" style="width:45%"></span></span><span class="src-count">236</span></div>
+<div class="src-row"><span class="src-name">Science</span><span class="src-bar-wrap"><span class="src-bar" style="width:18%"></span></span><span class="src-count">95</span></div>
+<div class="src-row"><span class="src-name">FDA</span><span class="src-bar-wrap"><span class="src-bar" style="width:13%"></span></span><span class="src-count">70</span></div>
+<div class="src-row"><span class="src-name">Hiring</span><span class="src-bar-wrap"><span class="src-bar" style="width:6%"></span></span><span class="src-count">34</span></div>
+<div class="src-row"><span class="src-name">SEC Filings</span><span class="src-bar-wrap"><span class="src-bar" style="width:2%"></span></span><span class="src-count">5</span></div>
+    </div>
+  </div>
+
+
+  <div class="about-block">
+    <p>Contract drug manufacturers sit at the picks-and-shovels layer of every pharmaceutical
+    innovation cycle. When a new modality breaks through clinically, CDMOs are the ones who must
+    scale it. When regulatory pressure hits a facility, every drug it makes is at risk.
+    When a biotech wins a blockbuster approval, its manufacturing partner wins with it.</p>
+    <p style="margin-top:14px">Mantis monitors 58 companies in this sector
+    across 8 independent data sources — patent filings, clinical trials, FDA
+    and EMA regulatory actions, scientific publications, SEC disclosures, hiring signals, and
+    industry news. When multiple sources
+    converge on the same company simultaneously, a convergence alert fires. When independent sources
+    agree on the same company, the evidential weight is categorically different from any single source alone.</p>
+  </div>
+
+  <div class="vignette-block">
+    <div class="vignette-label">Track record</div>
+    <p>In February 2026, within weeks of launch, Mantis detected convergent signals across a
+    major US contract drug manufacturer: hiring activity frozen, scientific output declining, and
+    SEC filings carrying strategic-review language. The company publicly confirmed a full exit
+    from contract drug manufacturing later that month &#8212; consistent with what the signal
+    pattern had suggested.</p>
+  </div>
+
+  <div class="sources-section">
+    <div class="section-header">
+      <span class="section-label">Data sources</span>
+      <span class="section-rule"></span>
+    </div>
+    <div class="source-pills">
+      <span class="pill">Patents (PatentsView)</span>
+      <span class="pill">Clinical Trials (ClinicalTrials.gov)</span>
+      <span class="pill">Science (PubMed · bioRxiv · ChemRxiv)</span>
+      <span class="pill">FDA (openFDA)</span>
+      <span class="pill">EMA (European Medicines Agency)</span>
+      <span class="pill">SEC Filings (EDGAR)</span>
+      <span class="pill">News (RSS)</span>
+      <span class="pill">Hiring signals</span>
+    </div>
+  </div>
+
+  <div class="cta-block">
+    <div>
+      <div class="cta-text">Want the weekly briefing?</div>
+      <div class="cta-sub">Weekly sector intelligence for CDMO strategy and business development teams.</div>
+    </div>
+    <a class="cta-link" href="mailto:mantis.intel@proton.me">mantis.intel@proton.me &rarr;</a>
+  </div>
+
+  <div class="foot">
+    <a href="mailto:mantis.intel@proton.me">mantis.intel@proton.me</a>
+    <small>&copy; 2026 Mantis Intelligence.</small>
+  </div>
+
+  <div class="foot-disclaimer">
+    <p><strong>Important notice:</strong> Mantis Intelligence is not authorised or regulated by
+    the Financial Conduct Authority (FCA) or any other financial regulator. The content on this
+    website is produced entirely by automated software systems and artificial intelligence for
+    <strong>information and research purposes only</strong>. Nothing on this site constitutes
+    investment advice, a personal recommendation, an offer, or a solicitation to buy or sell any
+    financial instrument. Past signal patterns are not predictive of future events or company performance.
+    Investments can fall as well as rise and you may get back less than you invest.
+    This site is intended solely for sophisticated readers who can evaluate information
+    independently. If you are unsure whether this material is appropriate for you, please seek
+    independent financial advice from an authorised adviser.</p>
+  </div>
+
+</main>
+
+<div id="term-tip"><div class="tt-full"></div><div class="tt-def"></div></div>
+<script>
+(function(){
+  var T={
+    'CDMO':{f:'Contract Development & Manufacturing Organisation',d:'A company providing drug development and manufacturing services on contract. CDMOs manufacture clinical and commercial drug supplies without owning the underlying IP — they are the backbone of modern pharmaceutical production.'},
+    'ADC':{f:'Antibody-Drug Conjugate',d:'A biologic drug linking a targeting monoclonal antibody to a cytotoxic payload via a chemical linker. Highly effective in oncology and one of the most technically demanding things to manufacture at scale — CDMOs with dedicated conjugation suites are operating at full capacity.'},
+    'CGT':{f:'Cell & Gene Therapy',d:'Advanced therapies that treat disease by modifying genes (gene therapy) or introducing living cells (cell therapy). Manufacturing is complex, often patient-specific, and expensive — a key growth area for specialist CDMOs.'},
+    'mAb':{f:'Monoclonal Antibody',d:'A laboratory-made protein that precisely targets a specific antigen. mAbs are the most common type of biologic drug and the largest volume product manufactured by biologics CDMOs.'},
+    'GLP-1':{f:'Glucagon-Like Peptide-1',d:'A gut hormone that stimulates insulin secretion and suppresses appetite. GLP-1 receptor agonists (Ozempic, Wegovy, Mounjaro) are driving an unprecedented surge in peptide manufacturing demand globally.'},
+    'mRNA':{f:'Messenger RNA',d:'Genetic molecules used in vaccines and therapies to instruct cells to make a specific protein. Post-COVID, mRNA manufacturing has expanded rapidly beyond vaccines into oncology and rare disease pipelines.'},
+    'LNP':{f:'Lipid Nanoparticle',d:'Microscopic fat particles used to deliver mRNA into cells. Formulating LNPs at commercial scale is a primary manufacturing bottleneck for mRNA-based medicines.'},
+    'API':{f:'Active Pharmaceutical Ingredient',d:'The biologically active molecule in a drug — what produces the therapeutic effect. Small molecule APIs are chemically synthesised; biologic APIs are grown in living cells. Both are major CDMO market segments.'},
+    'AAV':{f:'Adeno-Associated Virus',d:'The most common viral vector used to deliver gene therapies into cells. Manufacturing AAV at clinical and commercial scale remains technically demanding and expensive.'},
+    'CAR-T':{f:'Chimeric Antigen Receptor T-cell',d:"A cell therapy where a patient's own T-cells are modified to attack cancer. Each batch is patient-specific — making the manufacturing process uniquely complex and one of the most expensive in medicine."},
+    'BIOSECURE':{f:'BIOSECURE Act',d:'US legislation restricting federal agencies from contracting with specified Chinese biotech companies including WuXi AppTec. Driving significant pharmaceutical supply chain restructuring toward US, EU, and Indian CDMOs.'},
+    'biosimilar':{f:'Biosimilar',d:'A biologic drug highly similar to an already-approved reference product. Like a generic for small molecules but far more complex to manufacture — requiring extensive analytical and clinical comparison work.'},
+    'fill-finish':{f:'Fill-Finish Manufacturing',d:'The final manufacturing step: filling a drug into its container (vial, syringe, cartridge) under sterile conditions. A capacity-constrained and technically demanding CDMO capability, especially for injectables.'},
+    'CAPA':{f:'Corrective and Preventive Action',d:'A quality management process required by FDA and EMA to investigate manufacturing deviations, fix root causes, and prevent recurrence. Inadequate CAPA systems are the most common FDA warning letter trigger.'}
+  };
+  var keys=Object.keys(T).sort(function(a,b){return b.length-a.length;});
+  var esc=keys.map(function(k){return k.replace(/[-/\^$*+?.()|[\]{}]/g,'\$&');});
+  var pat=new RegExp('\\b('+esc.join('|')+')\\b','gi');
+  var tip=document.getElementById('term-tip');
+  var seen={};
+
+  function show(sp){
+    var kl=(sp.dataset.term||'').toLowerCase(),key=null;
+    for(var k in T){if(k.toLowerCase()===kl){key=k;break;}}
+    if(!key)return;
+    tip.querySelector('.tt-full').textContent=T[key].f;
+    tip.querySelector('.tt-def').textContent=T[key].d;
+    tip.style.opacity='0';tip.style.display='block';
+    var r=sp.getBoundingClientRect(),tw=tip.offsetWidth,th=tip.offsetHeight;
+    var left=r.left+r.width/2-tw/2;
+    var top=r.top-th-10+window.scrollY;
+    if(left<8)left=8;
+    if(left+tw>window.innerWidth-8)left=window.innerWidth-tw-8;
+    if(top<window.scrollY+8)top=r.bottom+8+window.scrollY;
+    tip.style.left=left+'px';tip.style.top=top+'px';tip.style.opacity='1';
+  }
+  function hide(){tip.style.opacity='0';tip.style.display='none';}
+
+  var SKIP={A:1,SCRIPT:1,STYLE:1,CODE:1,PRE:1,H1:1,H2:1,H3:1,H4:1};
+  function walk(node){
+    if(node.nodeType===3){
+      var txt=node.nodeValue;
+      if(!txt.trim())return;
+      pat.lastIndex=0;
+      if(!pat.test(txt)){pat.lastIndex=0;return;}
+      pat.lastIndex=0;
+      var frag=document.createDocumentFragment(),last=0,m,replaced=false;
+      while((m=pat.exec(txt))!==null){
+        var matched=m[1],canonKey=null;
+        for(var k in T){if(k.toLowerCase()===matched.toLowerCase()){canonKey=k;break;}}
+        if(!canonKey||seen[canonKey])continue;
+        if(m.index>last)frag.appendChild(document.createTextNode(txt.slice(last,m.index)));
+        var sp=document.createElement('span');
+        sp.className='term';sp.dataset.term=matched;sp.textContent=matched;
+        sp.addEventListener('mouseenter',function(){show(this);});
+        sp.addEventListener('mouseleave',hide);
+        sp.addEventListener('click',function(e){e.stopPropagation();show(this);});
+        frag.appendChild(sp);
+        last=m.index+matched.length;seen[canonKey]=true;replaced=true;
+      }
+      if(!replaced)return;
+      if(last<txt.length)frag.appendChild(document.createTextNode(txt.slice(last)));
+      node.parentNode.replaceChild(frag,node);
+    }else if(node.nodeType===1){
+      if(SKIP[node.tagName]||node.classList.contains('term'))return;
+      Array.prototype.slice.call(node.childNodes).forEach(walk);
+    }
+  }
+
+  function init(){
+    var scopes=document.querySelectorAll('.story-blurb,.about-block p,.narr-name,.news-title,.story-name');
+    for(var i=0;i<scopes.length;i++)walk(scopes[i]);
+    document.addEventListener('click',hide);
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}
+  else{init();}
+})();
+</script>
+</body>
+</html>
