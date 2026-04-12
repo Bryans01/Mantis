@@ -7,12 +7,12 @@
   <meta name="description" content="Systematic signal monitoring across 58 CDMO and bioprocess companies — patents, clinical trials, FDA actions, SEC filings, and industry news synthesised weekly.">
   <meta property="og:type"        content="website">
   <meta property="og:title"       content="Mantis — CDMO &amp; Bioprocess Sector Intelligence">
-  <meta property="og:description" content="Systematic monitoring of 58 contract drug manufacturers across 8 independent data sources. Patent filings, clinical trials, FDA &amp; EMA actions, SEC disclosures, scientific publications — synthesised weekly.">
+  <meta property="og:description" content="Multi-source convergence intelligence across 58 CDMO and bioprocess companies. When patents, hiring, clinical trials, and regulatory filings align on the same company, an alert fires. Synthesised weekly.">
     <meta property="og:image" content="https://bryans01.github.io/Mantis/images/narrative_momentum.png">
     <meta property="og:url"   content="https://bryans01.github.io/Mantis/">
   <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:title"       content="Mantis — CDMO &amp; Bioprocess Intelligence">
-  <meta name="twitter:description" content="Systematic monitoring of 58 CDMO companies across 8 independent data sources. Updated weekly.">  <meta name="twitter:image" content="https://bryans01.github.io/Mantis/images/narrative_momentum.png">
+  <meta name="twitter:description" content="Cross-source convergence monitoring across 58 CDMO companies. 63 predictions tracked and scored.">  <meta name="twitter:image" content="https://bryans01.github.io/Mantis/images/narrative_momentum.png">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -587,23 +587,42 @@
     }
     .cta-link:hover { text-decoration: underline; }
 
-    /* ── Sources ─────────────────────────────────── */
-    .sources-section { margin-top: 44px; }
-    .source-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 14px;
+    /* ── Convergence explainer ───────────────────── */
+    .conv-section { margin-top: 44px; }
+    .conv-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
     }
-    .pill {
+    .conv-step {
       background: var(--surface);
-      border: 1px solid var(--border2);
-      border-radius: 6px;
-      padding: 6px 14px;
-      font-size: 11.5px;
-      font-weight: 500;
+      padding: 22px 22px 24px;
+    }
+    .conv-num {
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--blue);
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    .conv-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+      letter-spacing: -0.2px;
+    }
+    .conv-body {
+      font-size: 12px;
+      line-height: 1.75;
       color: var(--text2);
-      letter-spacing: 0.1px;
+    }
+    @media (max-width: 580px) {
+      .conv-steps { grid-template-columns: 1fr; }
     }
 
     /* ── Footer ──────────────────────────────────── */
@@ -768,7 +787,7 @@
   <div class="hd">
     <h1 class="logo">&#9632;<span> M</span>ANTIS</h1>
     <div class="headline">CDMO &amp; Bioprocess<br>Sector Intelligence</div>
-    <div class="sub">Updated 12 April 2026 &nbsp;&middot;&nbsp; 58 companies &nbsp;&middot;&nbsp; 8 data sources</div>
+    <div class="sub">Updated 12 April 2026 &nbsp;&middot;&nbsp; 58 companies monitored</div>
   </div>
 </header>
 
@@ -789,8 +808,8 @@
         <div class="lbl">Convergence<br>alerts active</div>
       </div>
       <div class="stat">
-        <div class="num">8</div>
-        <div class="lbl">Data<br>sources</div>
+        <div class="num">63</div>
+        <div class="lbl">Predictions<br>tracked</div>
       </div>
     </div>
     <div class="narrative-band">
@@ -801,6 +820,24 @@
     <div class="tech-theme-band"><span class="tech-theme-kicker">Leading tech theme</span><span class="tech-theme-mod">Small Molecule</span><span class="tech-theme-note" style="margin-left:auto;font-size:10.5px;color:var(--text3)">Patent &amp; publication signals · 30 days</span></div>
   </div>
 
+
+  <div class="story-section">
+    <div class="section-header">
+      <span class="section-label">Story of the week</span>
+      <span class="section-rule"></span>
+    </div>
+    <div class="story-card">
+      <div class="story-top">
+        <span class="story-trend up">&#8599; Accelerating</span>
+        <span class="story-name">GLP-1 Manufacturing Capacity</span>
+      </div>
+      <div class="story-counts">
+        <span class="story-count-num">167</span><span class="story-count-lbl">signals this week</span>
+        <span class="story-sep">·</span>
+        <span class="story-count-num">23</span><span class="story-count-lbl">companies active</span>
+      </div>
+    </div>
+  </div>
 
   <div class="narr-section">
     <div class="section-header">
@@ -821,7 +858,6 @@
     </div>
   </div>
 
-
   <div class="chart-section">
     <div class="section-header">
       <span class="section-label">Narrative momentum — rolling 30 days</span>
@@ -829,10 +865,63 @@
     </div>
     <img src="images/narrative_momentum.png" alt="Narrative momentum — 30 days" class="chart-img">
     <p style="margin-top:10px;font-size:10.5px;color:var(--text3);font-style:italic">
-      Each line tracks one sector narrative — signal volume and strength across all monitored sources, updated daily.
+      Each line tracks one sector narrative — 7-day rolling average of signal volume and cross-source breadth, updated daily.
     </p>
   </div>
 
+  <div class="news-section">
+    <div class="section-header">
+      <span class="section-label">This week in CDMO &amp; bioprocess</span>
+      <span class="section-rule"></span>
+    </div>
+    <div class="news-list">
+      <a class="news-item" href="https://www.fiercepharma.com/pharma/pfizer-walks-away-underutilized-office-space-san-francisco-transitions-employees-remote" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">📰</span><span class="news-body"><span class="news-title">Pfizer walks away from &#x27;underutilized&#x27; office space in South San Francisco, transitions employees to remote roles</span><span class="news-meta"><span class="news-co">Pfizer</span><span class="news-domain">fiercepharma.com</span></span></span></span><span class="news-score">M&A</span></a>
+<a class="news-item" href="https://www.fiercebiotech.com/biotech/lilly-pays-ac-immune-125m-expand-alzheimers-collab-small-molecule-draws-closer-clinic" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">📰</span><span class="news-body"><span class="news-title">Lilly pays AC Immune $12.5M to expand Alzheimer’s collab as asset draws closer to clinic</span><span class="news-meta"><span class="news-co">Eli Lilly</span><span class="news-domain">fiercebiotech.com</span></span></span></span><span class="news-score">Capacity</span></a>
+<a class="news-item" href="https://www.fiercepharma.com/pharma/gardasil-demand-shortfall-merck-and-china-partner-zhifei-adjust-their-partnership" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">📰</span><span class="news-body"><span class="news-title">With Gardasil demand shortfall in China, Merck and Zhifei adjust their partnership</span><span class="news-meta"><span class="news-co">Merck KGaA</span><span class="news-domain">fiercepharma.com</span></span></span></span><span class="news-score">Partnership</span></a>
+<a class="news-item" href="https://www.fiercepharma.com/pharma/sanofi-and-pfizer-deals-novavax-bets-amplification-strategy-drive-vaccines-engine" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">📰</span><span class="news-body"><span class="news-title">With Sanofi and Pfizer deals, Novavax bets on ‘amplification strategy’ to drive vaccines engine</span><span class="news-meta"><span class="news-co">Pfizer</span><span class="news-domain">fiercepharma.com</span></span></span></span><span class="news-score">Partnership</span></a>
+<a class="news-item" href="https://www.fiercepharma.com/pharma/takeda-denali-split-merck-zhifei-revised-deal-shionogi-made-us-plan" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">📰</span><span class="news-body"><span class="news-title">Fierce Pharma Asia—Takeda-Denali split-up; Merck, Zhifei&#x27;s revised deal; Shionogi&#x27;s made-in-US plan</span><span class="news-meta"><span class="news-co">Merck KGaA</span><span class="news-domain">fiercepharma.com</span></span></span></span><span class="news-score">Partnership</span></a>
+<a class="news-item" href="https://www.fiercebiotech.com/cro/akari-locks-arms-wuxi-develop-and-manufacture-novel-adc-treatment" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">📰</span><span class="news-body"><span class="news-title">Akari locks arms with WuXi XDC to develop and manufacture novel ADC treatment</span><span class="news-meta"><span class="news-co">WuXi AppTec</span><span class="news-domain">fiercebiotech.com</span></span></span></span><span class="news-score">Partnership</span></a>
+    </div>
+    <p class="news-note">Curated from 941 signals scored this month.</p>
+  </div>
+
+  <div class="sig-section">
+    <div class="section-header">
+      <span class="section-label">Signal of the week</span>
+      <span class="section-rule"></span>
+    </div>
+    <a class="sig-card" href="https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&amp;ApplNo=ANDA211579" target="_blank" rel="noopener">
+      <div class="sig-badges">
+        <span class="sig-source-badge">FDA Action</span>
+        <span class="sig-strength">●●●●○○○○ &nbsp;4/10</span>
+      </div>
+      <div class="sig-title">Drug Approval: DAPAGLIFLOZIN AND METFORMIN HYDROCHLORIDE (manufactured by Lupin)</div>
+    </a>
+  </div>
+
+  <div class="conv-section">
+    <div class="section-header">
+      <span class="section-label">How it works</span>
+      <span class="section-rule"></span>
+    </div>
+    <div class="conv-steps">
+      <div class="conv-step">
+        <div class="conv-num">01</div>
+        <div class="conv-title">Collect</div>
+        <div class="conv-body">Signals ingested daily across patents, clinical trials, FDA and EMA regulatory filings, scientific publications, SEC disclosures, hiring patterns, and industry news. Each signal is scored and classified by therapy area and signal type.</div>
+      </div>
+      <div class="conv-step">
+        <div class="conv-num">02</div>
+        <div class="conv-title">Converge</div>
+        <div class="conv-body">When multiple independent sources flag the same company within a rolling window, a convergence alert fires. Cross-source agreement is the signal — a single news article is noise; a patent filing, a hiring surge, and a regulatory action on the same company are not.</div>
+      </div>
+      <div class="conv-step">
+        <div class="conv-num">03</div>
+        <div class="conv-title">Synthesise</div>
+        <div class="conv-body">A weekly synthesis covers what moved, what it implies, and where to look next. Predictions are made explicitly and logged — then scored as outcomes become known, building a calibration record over time.</div>
+      </div>
+    </div>
+  </div>
 
 
   <div class="src-section">
@@ -850,30 +939,11 @@
     </div>
   </div>
 
-
   <div class="about-block">
-    <p>Mantis monitors 58 CDMO and bioprocess companies across
-    8 public data sources — patent filings, clinical trials, FDA and EMA
-    regulatory actions, scientific publications, SEC disclosures, hiring signals, and industry
-    news. When multiple independent sources converge on the same company, an alert fires.
-    A weekly synthesis covers what moved, what it implies, and what to watch.</p>
-  </div>
-
-  <div class="sources-section">
-    <div class="section-header">
-      <span class="section-label">Data sources</span>
-      <span class="section-rule"></span>
-    </div>
-    <div class="source-pills">
-      <span class="pill">Patents (PatentsView)</span>
-      <span class="pill">Clinical Trials (ClinicalTrials.gov)</span>
-      <span class="pill">Science (PubMed · bioRxiv · ChemRxiv)</span>
-      <span class="pill">FDA (openFDA)</span>
-      <span class="pill">EMA (European Medicines Agency)</span>
-      <span class="pill">SEC Filings (EDGAR)</span>
-      <span class="pill">News (RSS)</span>
-      <span class="pill">Hiring signals</span>
-    </div>
+    <p>Mantis runs continuously — ingesting signals, scoring convergence, and tracking whether
+    its predictions come true. It does not summarise headlines. It identifies when independent
+    data sources start moving in the same direction on the same company, and asks what that
+    combination of evidence implies.</p>
   </div>
 
   <div class="cta-block">
