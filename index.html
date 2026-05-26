@@ -612,6 +612,48 @@
     .cta-link:hover { text-decoration: underline; }
 
     /* ── Convergence explainer ───────────────────── */
+    /* ── Convergence alert cards ─────────────────── */
+    .alerts-section { margin-top: 44px; }
+    .alerts-note {
+      font-size: 11px;
+      color: var(--text3);
+      margin-bottom: 14px;
+      font-style: italic;
+      line-height: 1.5;
+    }
+    .alert-board {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .alert-row {
+      display: grid;
+      grid-template-columns: 1fr 160px 52px;
+      align-items: center;
+      gap: 14px;
+      padding: 13px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .alert-row:last-child { border-bottom: none; }
+    .alert-header-row { padding: 9px 20px; background: var(--surface2); }
+    .alert-company { font-size: 13px; font-weight: 600; color: var(--text); }
+    .alert-sector { font-size: 11px; color: var(--text3); margin-top: 2px; }
+    .alert-sources { font-size: 11px; color: var(--text2); }
+    .alert-count { font-size: 13px; font-weight: 700; color: var(--blue2); text-align: right; }
+    .tier-badge {
+      display: inline-block;
+      font-size: 8.5px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+    .tier-1 { background: rgba(91,158,245,0.15); color: var(--blue2); border: 1px solid rgba(91,158,245,0.3); }
+    .tier-2 { background: rgba(160,149,144,0.1); color: var(--text3); border: 1px solid var(--border); }
+
     .conv-section { margin-top: 44px; }
     .conv-steps {
       display: grid;
@@ -863,7 +905,7 @@
   <div class="hd">
     <h1 class="logo">&#9632;<span> M</span>ANTIS</h1>
     <div class="headline">CDMO, Small Molecule<br>&amp; Bioprocess Intelligence</div>
-    <div class="sub">Updated 25 May 2026 &nbsp;&middot;&nbsp; 75 companies monitored</div>
+    <div class="sub">Updated 26 May 2026 &nbsp;&middot;&nbsp; 75 companies monitored</div>
   </div>
 </header>
 
@@ -872,7 +914,7 @@
   <div class="data-block">
     <div class="stats">
       <div class="stat">
-        <div class="num">1,836</div>
+        <div class="num">1,841</div>
         <div class="lbl">Signals<br>30 days</div>
       </div>
       <div class="stat">
@@ -880,7 +922,7 @@
         <div class="lbl">Companies<br>tracked</div>
       </div>
       <div class="stat">
-        <div class="num">44</div>
+        <div class="num">45</div>
         <div class="lbl">Convergence<br>alerts active</div>
       </div>
       <div class="stat">
@@ -890,7 +932,7 @@
     </div>
     <div class="narrative-band">
       <span class="narrative-kicker">Leading narrative</span>
-      <span class="narrative-tag">Biosimilar Market Expansion</span>
+      <span class="narrative-tag">GLP-1 Manufacturing Capacity</span>
       <span class="narrative-since">Rolling 7 days</span>
     </div>
     <div class="tech-theme-band"><span class="tech-theme-kicker">Leading tech theme</span><span class="tech-theme-mod">Bioprocess Platform</span><span class="tech-theme-note" style="margin-left:auto;font-size:10.5px;color:var(--text3)">Patent &amp; publication signals · 30 days</span></div>
@@ -905,12 +947,12 @@
     <div class="story-card">
       <div class="story-top">
         <span class="story-trend down">&#8600; Fading</span>
-        <span class="story-name">Biosimilar Market Expansion</span>
+        <span class="story-name">GLP-1 Manufacturing Capacity</span>
       </div>
       <div class="story-counts">
-        <span class="story-count-num">380</span><span class="story-count-lbl">signals this week</span>
+        <span class="story-count-num">458</span><span class="story-count-lbl">signals this week</span>
         <span class="story-sep">·</span>
-        <span class="story-count-num">28</span><span class="story-count-lbl">companies active</span>
+        <span class="story-count-num">39</span><span class="story-count-lbl">companies active</span>
       </div>
     </div>
   </div>
@@ -920,12 +962,12 @@
       <span class="section-label">Signal of the week</span>
       <span class="section-rule"></span>
     </div>
-    <a class="sig-card" href="https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&amp;ApplNo=NDA210251" target="_blank" rel="noopener">
+    <a class="sig-card" href="https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&amp;ApplNo=NDA208573" target="_blank" rel="noopener">
       <div class="sig-badges">
         <span class="sig-source-badge">FDA Action</span>
         <span class="sig-strength">●●●●○○○○ &nbsp;4/10</span>
       </div>
-      <div class="sig-title">Drug Approval: BIKTARVY (manufactured by Gilead Sciences)</div>
+      <div class="sig-title">Drug Approval: VENCLEXTA (manufactured by AbbVie)</div>
     </a>
   </div>
 
@@ -935,16 +977,16 @@
       <span class="section-rule"></span>
     </div>
     <div class="narr-board">
-      <div class="narr-row"><span class="narr-rank">01</span><span class="narr-name" style="color:#ffffff">Biosimilar Market Expansion</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:100%;background:#E05252"></span></span><span class="narr-score">380</span></div>
-      <div class="narr-row"><span class="narr-rank">02</span><span class="narr-name" style="color:#dcd7cf">GLP-1 Manufacturing Capacity</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:96%;background:#FF9040"></span></span><span class="narr-score">367</span></div>
-      <div class="narr-row"><span class="narr-rank">03</span><span class="narr-name" style="color:#dcd7cf">Cell &amp; Gene Therapy Manufacturing</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:81%;background:#5CB85C"></span></span><span class="narr-score">310</span></div>
-      <div class="narr-row"><span class="narr-rank">04</span><span class="narr-name" style="color:#a09590">India Generics &amp; API Expansion</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:58%;background:#A8D96C"></span></span><span class="narr-score">223</span></div>
-      <div class="narr-row"><span class="narr-rank">05</span><span class="narr-name" style="color:#a09590">Sector Consolidation &amp; M&amp;A</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:47%;background:#3DBCB0"></span></span><span class="narr-score">179</span></div>
-      <div class="narr-row"><span class="narr-rank">06</span><span class="narr-name" style="color:#a09590">Manufacturing Capacity Expansion</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:23%;background:#B06ED8"></span></span><span class="narr-score">90</span></div>
-      <div class="narr-row"><span class="narr-rank">07</span><span class="narr-name" style="color:#a09590">Generic &amp; Biosimilar Market Dynamics</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:20%;background:#C0C0C0"></span></span><span class="narr-score">78</span></div>
-      <div class="narr-row"><span class="narr-rank">08</span><span class="narr-name" style="color:#a09590">ADC Outsourcing Wave</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:18%;background:#5B9EF5"></span></span><span class="narr-score">71</span></div>
-      <div class="narr-row"><span class="narr-rank">09</span><span class="narr-name" style="color:#a09590">FDA / Regulatory Pressure</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:14%;background:#E8508A"></span></span><span class="narr-score">54</span></div>
-      <div class="narr-row"><span class="narr-rank">10</span><span class="narr-name" style="color:#a09590">Next-Gen Manufacturing Technology</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:12%;background:#F2C94C"></span></span><span class="narr-score">49</span></div>
+      <div class="narr-row"><span class="narr-rank">01</span><span class="narr-name" style="color:#ffffff">GLP-1 Manufacturing Capacity</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:100%;background:#FF9040"></span></span><span class="narr-score">458</span></div>
+      <div class="narr-row"><span class="narr-rank">02</span><span class="narr-name" style="color:#dcd7cf">Biosimilar Market Expansion</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:90%;background:#E05252"></span></span><span class="narr-score">413</span></div>
+      <div class="narr-row"><span class="narr-rank">03</span><span class="narr-name" style="color:#dcd7cf">Cell &amp; Gene Therapy Manufacturing</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:82%;background:#5CB85C"></span></span><span class="narr-score">380</span></div>
+      <div class="narr-row"><span class="narr-rank">04</span><span class="narr-name" style="color:#a09590">India Generics &amp; API Expansion</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:57%;background:#A8D96C"></span></span><span class="narr-score">265</span></div>
+      <div class="narr-row"><span class="narr-rank">05</span><span class="narr-name" style="color:#a09590">Sector Consolidation &amp; M&amp;A</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:56%;background:#3DBCB0"></span></span><span class="narr-score">261</span></div>
+      <div class="narr-row"><span class="narr-rank">06</span><span class="narr-name" style="color:#a09590">Manufacturing Capacity Expansion</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:26%;background:#B06ED8"></span></span><span class="narr-score">121</span></div>
+      <div class="narr-row"><span class="narr-rank">07</span><span class="narr-name" style="color:#a09590">ADC Outsourcing Wave</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:22%;background:#5B9EF5"></span></span><span class="narr-score">102</span></div>
+      <div class="narr-row"><span class="narr-rank">08</span><span class="narr-name" style="color:#a09590">Generic &amp; Biosimilar Market Dynamics</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:18%;background:#C0C0C0"></span></span><span class="narr-score">83</span></div>
+      <div class="narr-row"><span class="narr-rank">09</span><span class="narr-name" style="color:#a09590">FDA / Regulatory Pressure</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:13%;background:#E8508A"></span></span><span class="narr-score">62</span></div>
+      <div class="narr-row"><span class="narr-rank">10</span><span class="narr-name" style="color:#a09590">Next-Gen Manufacturing Technology</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:13%;background:#F2C94C"></span></span><span class="narr-score">62</span></div>
     </div>
   </div>
 
@@ -957,6 +999,26 @@
     <p style="margin-top:10px;font-size:10.5px;color:var(--text3);font-style:italic">
       Each line tracks one sector narrative — 7-day rolling average of signal volume and cross-source breadth, updated daily.
     </p>
+  </div>
+
+  <div class="alerts-section">
+    <div class="section-header">
+      <span class="section-label">Active convergence alerts</span>
+      <span class="section-rule"></span>
+    </div>
+    <p class="alerts-note">Companies generating multi-source signal convergence this week. Convergence = multiple independent sources flagging the same company within 30 days. Signal counts are raw data &#8212; no editorial interpretation.</p>
+    <div class="alert-board">
+      <div class="alert-row alert-header-row">
+        <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);">Sector / Tier</div>
+        <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);">Sources active</div>
+        <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);text-align:right;">Signals</div>
+      </div>
+<div class="alert-row"><div><span class="alert-company"><span class="tier-badge tier-2">Adjacent</span></span><div class="alert-sector">Pharma</div></div><div class="alert-sources">jobs &middot; science &middot; fda &middot; clinical &middot; news</div><div class="alert-count">68</div></div>
+<div class="alert-row"><div><span class="alert-company"><span class="tier-badge tier-2">Adjacent</span></span><div class="alert-sector">Immunology</div></div><div class="alert-sources">jobs &middot; sec &middot; science &middot; fda &middot; clinical &middot; news</div><div class="alert-count">71</div></div>
+<div class="alert-row"><div><span class="alert-company"><span class="tier-badge tier-2">Adjacent</span></span><div class="alert-sector">Pharma</div></div><div class="alert-sources">jobs &middot; science &middot; fda &middot; clinical &middot; news</div><div class="alert-count">45</div></div>
+<div class="alert-row"><div><span class="alert-company"><span class="tier-badge tier-2">Adjacent</span></span><div class="alert-sector">Pharma</div></div><div class="alert-sources">jobs &middot; sec &middot; science &middot; clinical &middot; news</div><div class="alert-count">57</div></div>
+<div class="alert-row"><div><span class="alert-company"><span class="tier-badge tier-2">Adjacent</span></span><div class="alert-sector">General</div></div><div class="alert-sources">sec &middot; science &middot; fda &middot; clinical &middot; news</div><div class="alert-count">36</div></div>
+    </div>
   </div>
 
   <div class="news-section">
@@ -972,7 +1034,6 @@
 <a class="news-item" href="https://www.fiercepharma.com/pharma/roche-signs-generic-xofluza-licensing-deal-medicines-patent-pool-129-countries" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">📰</span><span class="news-body"><span class="news-title">Roche signs generic Xofluza licensing deal with Medicines Patent Pool for 129 countries</span><span class="news-meta"><span class="news-co">Roche</span><span class="news-domain">fiercepharma.com</span></span></span></span><span class="news-score">Partnership</span></a>
 <a class="news-item" href="https://www.pharmaceutical-technology.com/news/fujifilm-opens-new-ipsc-facility/" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">📰</span><span class="news-body"><span class="news-title">FUJIFILM opens new iPSC facility in Madison, US</span><span class="news-meta"><span class="news-co">Fujifilm Diosynth</span><span class="news-domain">pharmaceutical-technology.com</span></span></span></span></a>
 <a class="news-item" href="https://www.pharmaceutical-technology.com/news/gilead-teams-up-with-who-again-to-eliminate-parasitic-tropical-disease/" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">📰</span><span class="news-body"><span class="news-title">Gilead teams up with WHO again to eliminate parasitic tropical disease</span><span class="news-meta"><span class="news-co">Gilead Sciences</span><span class="news-domain">pharmaceutical-technology.com</span></span></span></span></a>
-<a class="news-item" href="https://www.pharmaceutical-technology.com/news/japans-mhlw-boehringers-jascayd-approval/" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">📰</span><span class="news-body"><span class="news-title">Japan’s MHLW approves Boehringer’s Jascayd for IPF and PPF</span><span class="news-meta"><span class="news-co">Boehringer Ingelheim Biopharmaceuticals</span><span class="news-domain">pharmaceutical-technology.com</span></span></span></span></a>
 <a class="news-item" href="https://www.pharmaceutical-technology.com/news/regeneron-parabilis-deal-helicon-conjugates/" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">📰</span><span class="news-body"><span class="news-title">Regeneron signs $2.32bn deal with Parabilis for Helicon conjugates</span><span class="news-meta"><span class="news-co">Regeneron Pharmaceuticals</span><span class="news-domain">pharmaceutical-technology.com</span></span></span></span></a>
     </div>
   </div>
@@ -984,13 +1045,13 @@
     </div>
     <div class="news-list">
       <a class="news-item" href="https://www.drugdiscoverytrends.com/immunais-digital-plumbing-keeps-astrazeneca-coming-back/" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">🏗</span><span class="news-body"><span class="news-title">Immunai’s digital ‘plumbing’ keeps AstraZeneca coming back</span><span class="news-meta"><span class="news-co">AstraZeneca</span></span></span></span><span class="news-score">4</span></a>
-<a class="news-item" href="https://www.drugdiscoverytrends.com/novo-nordisk-hands-a-parkinsons-cell-therapy-to-cellular-intelligence-a-startup-trying-to-design-cell-behavior/" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">🤝</span><span class="news-body"><span class="news-title">Novo Nordisk hands a Parkinson’s cell therapy to Cellular Intelligence, a startup trying to design cell behavior</span><span class="news-meta"><span class="news-co">Novo Nordisk</span></span></span></span><span class="news-score">5</span></a>
 <a class="news-item" href="https://www.fiercebiotech.com/biotech/bms-inks-15b-biobuck-deal-bag-hengrui-assets-tap-chinas-rd-speed" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">🤝</span><span class="news-body"><span class="news-title">Bristol Myers Squibb inks $15B biobucks deal to bag Hengrui assets, tap China’s R&amp;D speed</span><span class="news-meta"><span class="news-co">Bristol Myers Squibb</span></span></span></span><span class="news-score">3</span></a>
 <a class="news-item" href="https://www.fiercebiotech.com/biotech/boehringer-furthers-inflammatory-expansion-eu407m-biobuck-bet-immunitas-asset" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">🏗</span><span class="news-body"><span class="news-title">Boehringer furthers inflammatory expansion with €407M biobucks bet on Immunitas asset</span><span class="news-meta"><span class="news-co">Boehringer Ingelheim Biopharmaceuticals</span></span></span></span><span class="news-score">4</span></a>
 <a class="news-item" href="https://www.fiercebiotech.com/medtech/astrazeneca-pens-agentic-ai-licensing-deal-owkin" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">🤝</span><span class="news-body"><span class="news-title">AstraZeneca pens agentic AI licensing deal with Owkin</span><span class="news-meta"><span class="news-co">AstraZeneca</span></span></span></span><span class="news-score">3</span></a>
 <a class="news-item" href="https://www.fiercebiotech.com/partner-content/building-trust-driven-partnerships-astrazenecas-concierge-approach-accelerating" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">🤝</span><span class="news-body"><span class="news-title">Building Trust-Driven Partnerships: AstraZeneca’s Concierge Approach to Accelerating Site Activation and Enrollment</span><span class="news-meta"><span class="news-co">AstraZeneca</span></span></span></span><span class="news-score">3</span></a>
 <a class="news-item" href="https://www.fiercepharma.com/manufacturing/gilead-signs-140m-deal-korean-api-manufacturer-yuhan" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">🤝</span><span class="news-body"><span class="news-title">Gilead inks another deal with Korean API manufacturer Yuhan, this time worth $140M</span><span class="news-meta"><span class="news-co">Gilead Sciences</span></span></span></span><span class="news-score">4</span></a>
 <a class="news-item" href="https://www.fiercepharma.com/pharma/gilead-pledges-400k-ambiosome-doses-fight-visceral-leishmaniasis-expanded-who-collab" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">🏗</span><span class="news-body"><span class="news-title">Gilead pledges 400K AmBisome doses to fight visceral leishmaniasis in expanded WHO collab</span><span class="news-meta"><span class="news-co">Gilead Sciences</span></span></span></span><span class="news-score">5</span></a>
+<a class="news-item" href="https://www.fiercepharma.com/pharma/merck-kelun-adc-triple-wins-wisdom-china-licensing-deals-takeda-885m-antitrust-loss" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">🤝</span><span class="news-body"><span class="news-title">Fierce Pharma Asia—Merck-Kelun ADC’s triple wins; Tools in China licensing deals; Takeda’s $885M antitrust loss</span><span class="news-meta"><span class="news-co">Merck</span></span></span></span><span class="news-score">4</span></a>
     </div>
   </div>
 
@@ -1001,12 +1062,12 @@
       <span style="font-size:10px;color:var(--text3);margin-left:auto">Pharma pipeline signals</span>
     </div>
     <div class="news-list">
-      <a class="news-item" href="https://www.fiercepharma.com/pharma/astrazeneca-notches-key-fda-nod-hypertension-approval-sweetener-fasenra-too" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">📈</span><span class="news-body"><span class="news-title">AstraZeneca notches key FDA nod in hypertension, with an approval sweetener for Fasenra too</span><span class="news-meta"><span class="news-co" style="background:rgba(91,158,245,0.1);color:var(--blue2);border-color:rgba(91,158,245,0.2)">AstraZeneca</span></span></span></span><span class="news-score">4</span></a>
+      <a class="news-item" href="https://www.fiercebiotech.com/biotech/lilly-preps-ph-2-launch-after-verve-gene-editor-cuts-cholesterol-par-pcsk9-inhibitors" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">📈</span><span class="news-body"><span class="news-title">Lilly preps for ph. 2 launch after Verve gene editor cuts cholesterol on par with PCSK9 inhibitors</span><span class="news-meta"><span class="news-co" style="background:rgba(91,158,245,0.1);color:var(--blue2);border-color:rgba(91,158,245,0.2)">Eli Lilly</span></span></span></span><span class="news-score">3</span></a>
+<a class="news-item" href="https://www.fiercepharma.com/pharma/astrazeneca-notches-key-fda-nod-hypertension-approval-sweetener-fasenra-too" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">📈</span><span class="news-body"><span class="news-title">AstraZeneca notches key FDA nod in hypertension, with an approval sweetener for Fasenra too</span><span class="news-meta"><span class="news-co" style="background:rgba(91,158,245,0.1);color:var(--blue2);border-color:rgba(91,158,245,0.2)">AstraZeneca</span></span></span></span><span class="news-score">4</span></a>
 <a class="news-item" href="https://www.fiercepharma.com/pharma/astrazeneca-scores-imfinzi-another-bladder-cancer-trial" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">📈</span><span class="news-body"><span class="news-title">AstraZeneca scores with Imfinzi in another bladder cancer trial, rivaling Merck&#x27;s Keytruda</span><span class="news-meta"><span class="news-co" style="background:rgba(91,158,245,0.1);color:var(--blue2);border-color:rgba(91,158,245,0.2)">AstraZeneca</span></span></span></span><span class="news-score">4</span></a>
 <a class="news-item" href="https://www.fiercepharma.com/pharma/daiichi-astrazeneca-enhertu-breaks-early-breast-cancer-dual-fda-approvals" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">📈</span><span class="news-body"><span class="news-title">Daiichi, AstraZeneca’s Enhertu breaks into early breast cancer with dual FDA approvals</span><span class="news-meta"><span class="news-co" style="background:rgba(91,158,245,0.1);color:var(--blue2);border-color:rgba(91,158,245,0.2)">AstraZeneca</span></span></span></span><span class="news-score">4</span></a>
+<a class="news-item" href="https://www.pharmaceutical-technology.com/news/astrazeneca-daiichi-datroway-fda-approval/" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">📈</span><span class="news-body"><span class="news-title">AstraZeneca, Daiichi Sankyo’s Datroway receives FDA approval for TNBC</span><span class="news-meta"><span class="news-co" style="background:rgba(91,158,245,0.1);color:var(--blue2);border-color:rgba(91,158,245,0.2)">AstraZeneca</span></span></span></span><span class="news-score">4</span></a>
 <a class="news-item" href="https://www.pharmaceutical-technology.com/news/bridgebio-attruby-acoramidis-attr-cm-hf-2026-2/" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">📈</span><span class="news-body"><span class="news-title">BridgeBio’s Attruby challenges Pfizer’s Vyndamax legacy in pivotal ATTR trial</span><span class="news-meta"><span class="news-co" style="background:rgba(91,158,245,0.1);color:var(--blue2);border-color:rgba(91,158,245,0.2)">Pfizer</span></span></span></span><span class="news-score">2</span></a>
-<a class="news-item" href="https://www.pharmaceutical-technology.com/news/cellular-intelligence-licenses-novos-shelved-parkinsons-cell-therapy-programme/" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">📈</span><span class="news-body"><span class="news-title">Cellular Intelligence licenses Novo’s shelved Parkinson’s cell therapy programme</span><span class="news-meta"><span class="news-co" style="background:rgba(91,158,245,0.1);color:var(--blue2);border-color:rgba(91,158,245,0.2)">Novo Nordisk</span></span></span></span><span class="news-score">2</span></a>
-<a class="news-item" href="https://www.pharmaceutical-technology.com/news/gilead-teams-up-with-who-again-to-eliminate-parasitic-tropical-disease/" target="_blank" rel="noopener"><span class="news-left"><span class="news-icon">📈</span><span class="news-body"><span class="news-title">Gilead teams up with WHO again to eliminate parasitic tropical disease</span><span class="news-meta"><span class="news-co" style="background:rgba(91,158,245,0.1);color:var(--blue2);border-color:rgba(91,158,245,0.2)">Gilead Sciences</span></span></span></span><span class="news-score">2</span></a>
     </div>
   </div>
 
@@ -1041,12 +1102,12 @@
       <span class="section-rule"></span>
     </div>
     <div class="src-rows">
-      <div class="src-row"><span class="src-name">News</span><span class="src-bar-wrap"><span class="src-bar" style="width:100%"></span></span><span class="src-count">1,005</span></div>
+      <div class="src-row"><span class="src-name">News</span><span class="src-bar-wrap"><span class="src-bar" style="width:100%"></span></span><span class="src-count">995</span></div>
 <div class="src-row"><span class="src-name">Clinical Trials</span><span class="src-bar-wrap"><span class="src-bar" style="width:30%"></span></span><span class="src-count">306</span></div>
 <div class="src-row"><span class="src-name">Patent Cliff</span><span class="src-bar-wrap"><span class="src-bar" style="width:30%"></span></span><span class="src-count">305</span></div>
-<div class="src-row"><span class="src-name">Science</span><span class="src-bar-wrap"><span class="src-bar" style="width:10%"></span></span><span class="src-count">106</span></div>
-<div class="src-row"><span class="src-name">Hiring</span><span class="src-bar-wrap"><span class="src-bar" style="width:5%"></span></span><span class="src-count">57</span></div>
-<div class="src-row"><span class="src-name">FDA</span><span class="src-bar-wrap"><span class="src-bar" style="width:3%"></span></span><span class="src-count">35</span></div>
+<div class="src-row"><span class="src-name">Science</span><span class="src-bar-wrap"><span class="src-bar" style="width:11%"></span></span><span class="src-count">118</span></div>
+<div class="src-row"><span class="src-name">Hiring</span><span class="src-bar-wrap"><span class="src-bar" style="width:5%"></span></span><span class="src-count">59</span></div>
+<div class="src-row"><span class="src-name">FDA</span><span class="src-bar-wrap"><span class="src-bar" style="width:3%"></span></span><span class="src-count">36</span></div>
 <div class="src-row"><span class="src-name">SEC Filings</span><span class="src-bar-wrap"><span class="src-bar" style="width:2%"></span></span><span class="src-count">22</span></div>
     </div>
   </div>
