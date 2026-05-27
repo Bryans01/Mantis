@@ -612,48 +612,6 @@
     .cta-link:hover { text-decoration: underline; }
 
     /* ── Convergence explainer ───────────────────── */
-    /* ── Convergence alert cards ─────────────────── */
-    .alerts-section { margin-top: 44px; }
-    .alerts-note {
-      font-size: 11px;
-      color: var(--text3);
-      margin-bottom: 14px;
-      font-style: italic;
-      line-height: 1.5;
-    }
-    .alert-board {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    .alert-row {
-      display: grid;
-      grid-template-columns: 1fr 160px 52px;
-      align-items: center;
-      gap: 14px;
-      padding: 13px 20px;
-      border-bottom: 1px solid var(--border);
-    }
-    .alert-row:last-child { border-bottom: none; }
-    .alert-header-row { padding: 9px 20px; background: var(--surface2); }
-    .alert-company { font-size: 13px; font-weight: 600; color: var(--text); }
-    .alert-sector { font-size: 11px; color: var(--text3); margin-top: 2px; }
-    .alert-sources { font-size: 11px; color: var(--text2); }
-    .alert-count { font-size: 13px; font-weight: 700; color: var(--blue2); text-align: right; }
-    .tier-badge {
-      display: inline-block;
-      font-size: 8.5px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      padding: 2px 7px;
-      border-radius: 4px;
-      margin-left: 6px;
-      vertical-align: middle;
-    }
-    .tier-1 { background: rgba(91,158,245,0.15); color: var(--blue2); border: 1px solid rgba(91,158,245,0.3); }
-    .tier-2 { background: rgba(160,149,144,0.1); color: var(--text3); border: 1px solid var(--border); }
-
     .conv-section { margin-top: 44px; }
     .conv-steps {
       display: grid;
@@ -922,10 +880,6 @@
         <div class="lbl">Companies<br>tracked</div>
       </div>
       <div class="stat">
-        <div class="num">45</div>
-        <div class="lbl">Convergence<br>alerts active</div>
-      </div>
-      <div class="stat">
         <div class="num">137</div>
         <div class="lbl">Predictions<br>logged</div>
       </div>
@@ -946,13 +900,13 @@
     </div>
     <div class="story-card">
       <div class="story-top">
-        <span class="story-trend flat">&#8594; Steady</span>
+        <span class="story-trend up">&#8599; Accelerating</span>
         <span class="story-name">GLP-1 Manufacturing Capacity</span>
       </div>
       <div class="story-counts">
-        <span class="story-count-num">460</span><span class="story-count-lbl">signals this week</span>
+        <span class="story-count-num">541</span><span class="story-count-lbl">signals this week</span>
         <span class="story-sep">·</span>
-        <span class="story-count-num">39</span><span class="story-count-lbl">companies active</span>
+        <span class="story-count-num">43</span><span class="story-count-lbl">companies active</span>
       </div>
     </div>
   </div>
@@ -977,16 +931,16 @@
       <span class="section-rule"></span>
     </div>
     <div class="narr-board">
-      <div class="narr-row"><span class="narr-rank">01</span><span class="narr-name" style="color:#ffffff">GLP-1 Manufacturing Capacity</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:100%;background:#FF9040"></span></span><span class="narr-score">460</span></div>
-      <div class="narr-row"><span class="narr-rank">02</span><span class="narr-name" style="color:#dcd7cf">Biosimilar Market Expansion</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:90%;background:#E05252"></span></span><span class="narr-score">418</span></div>
-      <div class="narr-row"><span class="narr-rank">03</span><span class="narr-name" style="color:#dcd7cf">Cell &amp; Gene Therapy Manufacturing</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:83%;background:#5CB85C"></span></span><span class="narr-score">382</span></div>
-      <div class="narr-row"><span class="narr-rank">04</span><span class="narr-name" style="color:#a09590">India Generics &amp; API Expansion</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:57%;background:#A8D96C"></span></span><span class="narr-score">263</span></div>
-      <div class="narr-row"><span class="narr-rank">05</span><span class="narr-name" style="color:#a09590">Sector Consolidation &amp; M&amp;A</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:55%;background:#3DBCB0"></span></span><span class="narr-score">255</span></div>
-      <div class="narr-row"><span class="narr-rank">06</span><span class="narr-name" style="color:#a09590">Manufacturing Capacity Expansion</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:25%;background:#B06ED8"></span></span><span class="narr-score">117</span></div>
-      <div class="narr-row"><span class="narr-rank">07</span><span class="narr-name" style="color:#a09590">ADC Outsourcing Wave</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:22%;background:#5B9EF5"></span></span><span class="narr-score">105</span></div>
-      <div class="narr-row"><span class="narr-rank">08</span><span class="narr-name" style="color:#a09590">Generic &amp; Biosimilar Market Dynamics</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:18%;background:#C0C0C0"></span></span><span class="narr-score">85</span></div>
-      <div class="narr-row"><span class="narr-rank">09</span><span class="narr-name" style="color:#a09590">FDA / Regulatory Pressure</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:13%;background:#E8508A"></span></span><span class="narr-score">61</span></div>
-      <div class="narr-row"><span class="narr-rank">10</span><span class="narr-name" style="color:#a09590">Next-Gen Manufacturing Technology</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:13%;background:#F2C94C"></span></span><span class="narr-score">61</span></div>
+      <div class="narr-row"><span class="narr-rank">01</span><span class="narr-name" style="color:#ffffff">GLP-1 Manufacturing Capacity</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:100%;background:#FF9040"></span></span><span class="narr-score">541</span></div>
+      <div class="narr-row"><span class="narr-rank">02</span><span class="narr-name" style="color:#dcd7cf">Cell &amp; Gene Therapy Manufacturing</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:83%;background:#5CB85C"></span></span><span class="narr-score">451</span></div>
+      <div class="narr-row"><span class="narr-rank">03</span><span class="narr-name" style="color:#dcd7cf">Biosimilar Market Expansion</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:82%;background:#E05252"></span></span><span class="narr-score">444</span></div>
+      <div class="narr-row"><span class="narr-rank">04</span><span class="narr-name" style="color:#a09590">Sector Consolidation &amp; M&amp;A</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:63%;background:#3DBCB0"></span></span><span class="narr-score">343</span></div>
+      <div class="narr-row"><span class="narr-rank">05</span><span class="narr-name" style="color:#a09590">India Generics &amp; API Expansion</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:56%;background:#A8D96C"></span></span><span class="narr-score">308</span></div>
+      <div class="narr-row"><span class="narr-rank">06</span><span class="narr-name" style="color:#a09590">Manufacturing Capacity Expansion</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:28%;background:#B06ED8"></span></span><span class="narr-score">152</span></div>
+      <div class="narr-row"><span class="narr-rank">07</span><span class="narr-name" style="color:#a09590">ADC Outsourcing Wave</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:25%;background:#5B9EF5"></span></span><span class="narr-score">136</span></div>
+      <div class="narr-row"><span class="narr-rank">08</span><span class="narr-name" style="color:#a09590">Generic &amp; Biosimilar Market Dynamics</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:16%;background:#C0C0C0"></span></span><span class="narr-score">88</span></div>
+      <div class="narr-row"><span class="narr-rank">09</span><span class="narr-name" style="color:#a09590">Next-Gen Manufacturing Technology</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:13%;background:#F2C94C"></span></span><span class="narr-score">73</span></div>
+      <div class="narr-row"><span class="narr-rank">10</span><span class="narr-name" style="color:#a09590">FDA / Regulatory Pressure</span><span class="narr-bar-wrap"><span class="narr-bar" style="width:12%;background:#E8508A"></span></span><span class="narr-score">70</span></div>
     </div>
   </div>
 
@@ -999,26 +953,6 @@
     <p style="margin-top:10px;font-size:10.5px;color:var(--text3);font-style:italic">
       Each line tracks one sector narrative — 7-day rolling average of signal volume and cross-source breadth, updated daily.
     </p>
-  </div>
-
-  <div class="alerts-section">
-    <div class="section-header">
-      <span class="section-label">Active convergence alerts</span>
-      <span class="section-rule"></span>
-    </div>
-    <p class="alerts-note">Companies generating multi-source signal convergence this week. Convergence = multiple independent sources flagging the same company within 30 days. Signal counts are raw data &#8212; no editorial interpretation.</p>
-    <div class="alert-board">
-      <div class="alert-row alert-header-row">
-        <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);">Sector / Tier</div>
-        <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);">Sources active</div>
-        <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);text-align:right;">Signals</div>
-      </div>
-<div class="alert-row"><div><span class="alert-company"><span class="tier-badge tier-2">Adjacent</span></span><div class="alert-sector">Pharma</div></div><div class="alert-sources">fda &middot; clinical &middot; jobs &middot; news &middot; science</div><div class="alert-count">72</div></div>
-<div class="alert-row"><div><span class="alert-company"><span class="tier-badge tier-2">Adjacent</span></span><div class="alert-sector">Pharma</div></div><div class="alert-sources">fda &middot; clinical &middot; jobs &middot; news &middot; science</div><div class="alert-count">46</div></div>
-<div class="alert-row"><div><span class="alert-company"><span class="tier-badge tier-2">Adjacent</span></span><div class="alert-sector">Immunology</div></div><div class="alert-sources">fda &middot; clinical &middot; sec &middot; jobs &middot; news &middot; science</div><div class="alert-count">81</div></div>
-<div class="alert-row"><div><span class="alert-company"><span class="tier-badge tier-2">Adjacent</span></span><div class="alert-sector">Pharma</div></div><div class="alert-sources">clinical &middot; sec &middot; jobs &middot; news &middot; science</div><div class="alert-count">61</div></div>
-<div class="alert-row"><div><span class="alert-company"><span class="tier-badge tier-2">Adjacent</span></span><div class="alert-sector">General</div></div><div class="alert-sources">fda &middot; clinical &middot; sec &middot; news &middot; science</div><div class="alert-count">38</div></div>
-    </div>
   </div>
 
   <div class="news-section">
